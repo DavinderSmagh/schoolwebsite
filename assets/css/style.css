@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #0F4C81;
+    --color-secondary: #1F77B4;
+    --color-gold: #D4AF37;
+    --color-dark: #0B2239;
+    --shadow-glass: 0 8px 32px 0 rgba(15, 76, 129, 0.20);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, #f8fbff 0%, #f1f5f9 100%);
+}
+
+.announcement-bar {
+    background: linear-gradient(90deg, #0f4c81 0%, #1f77b4 60%, #d4af37 100%);
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 0.35rem 0;
+    overflow: hidden;
+}
+
+.announcement-bar p {
+    white-space: nowrap;
+    animation: scrollNews 24s linear infinite;
+}
+
+@keyframes scrollNews {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.hero-overlay {
+    background: linear-gradient(120deg, rgba(15, 76, 129, 0.85), rgba(31, 119, 180, 0.65));
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(15, 76, 129, 0.12);
+}
+
+.section-title {
+    color: #0f4c81;
+    font-weight: 700;
+}
+
+.btn-primary,
+.btn-gold,
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.1rem;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background: #0f4c81;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #0b385f;
+}
+
+.btn-gold {
+    background: #d4af37;
+    color: #0b2239;
+}
+
+.btn-gold:hover {
+    transform: translateY(-1px);
+    background: #e6c454;
+}
+
+.btn-outline {
+    border: 1px solid #0f4c81;
+    color: #0f4c81;
+}
+
+.btn-outline:hover {
+    background: #0f4c81;
+    color: #fff;
+}
+
+.premium-card {
+    border-radius: 1rem;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(15, 76, 129, 0.15);
+}
+
+.counter {
+    font-weight: 700;
+    color: #0f4c81;
+}
+
+.hero-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 0.8rem;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 1rem;
+}
+
+.lightbox img {
+    max-width: min(920px, 95vw);
+    max-height: 85vh;
+    border-radius: 0.8rem;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 90;
+    background: #25d366;
+    color: white;
+    border-radius: 999px;
+    padding: 0.8rem 1rem;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.35);
+}
